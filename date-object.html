@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date-object</title>
+</head>
+<body>
+<script>
+    let Mydate = function(d, m, y){
+        this.day = d;
+        this.month=m;
+        this.year=y;
+        // trả lại giá trị của của this.day của Mydate
+        this.getDay = function(){
+            return this.day;
+        }
+
+        this.getMonth = function(){
+            return this.month;
+        }
+        this.getYear = function(){
+            return this.year;
+        }
+        //gán thisday = d được nhập vào
+        this.setDay= function(){
+            this.day=d;
+        }
+        this.setMonth= function(){
+            this.month=m;
+        }
+        this.setYear= function(){
+            this.year=y;
+        }
+        this.show = function(){
+            alert("to day is " + this.getDay() + "/" + this.getMonth() + "/" + this.getYear())
+        }
+    }
+    let date = new Mydate(9,7,2018);
+    console.log(date);
+    date.show();
+
+
+</script>
+</body>
+</html>
